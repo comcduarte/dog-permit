@@ -1,0 +1,12 @@
+[submodule "module\\Dog"]
+	path = module\\Dog
+	url = ssh://git@github.com/comcduarte/dogModule
+[submodule "module\\Midnet"]
+	path = module\\Midnet
+	url = ssh://git@github.com/comcduarte/midnetModule
+[submodule "module\\Annotation"]
+	path = module\\Annotation
+	url = ssh://git@github.com/comcduarte/annotationModule
+[submodule "module\\User"]
+	path = module\\User
+	url = ssh://git@github.com/comcduarte/userModule
