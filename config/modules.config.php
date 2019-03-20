@@ -26,4 +26,5 @@ return [
     'Dog',
     'Annotation',
     'User',
+    'Acl',
 ];

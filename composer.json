@@ -17,14 +17,16 @@
 		"zendframework/zend-mvc" : "3.1.1",
 		"zfcampus/zf-development-mode" : "3.2.0",
 		"zendframework/zend-db" : "~2.10",
-		"zendframework/zend-form" : "~2.14",
+		"zendframework/zend-form" : "2.12.0",
 		"zendframework/zend-paginator" : "~2.8",
 		"zendframework/zend-crypt" : "~3.3",
 		"zendframework/zend-authentication" : "~2.6",
 		"zendframework/zend-session" : "~2.8",
 		"zendframework/zend-navigation" : "~2.9",
 		"zendframework/zend-mvc-plugin-flashmessenger" : "~1.1",
-		"zendframework/zend-i18n" : "~2.9"
+		"zendframework/zend-i18n" : "~2.9",
+		"zendframework/zend-permissions-rbac" : "~3.0",
+		"zendframework/zend-permissions-acl" : "~2.7"
 	},
 	"autoload" : {
 		"psr-4" : {
@@ -32,7 +34,8 @@
 			"Dog\\" : "module/Dog/src/",
 			"Midnet\\" : "module/Midnet/src",
 			"Annotation\\" : "module/Annotation/src",
-			"User\\" : "module/User/src"
+			"User\\" : "module/User/src",
+			"Acl\\" : "module/Acl/src"
 		}
 	},
 	"autoload-dev" : {

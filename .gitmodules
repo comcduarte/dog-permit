@@ -10,3 +10,6 @@
 [submodule "module\\User"]
 	path = module\\User
 	url = ssh://git@github.com/comcduarte/userModule
+[submodule "module\\Acl"]
+	path = module\\Acl
+	url = ssh://git@github.com/comcduarte/aclModule

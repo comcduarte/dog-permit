@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?= $this->headTitle('ZF Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?= $this->headTitle('Middletown Dog Permit')->setSeparator(' - ')->setAutoEscape(false) ?>
 
         <?= $this->headMeta()
             ->appendName('viewport', 'width=device-width, initial-scale=1.0')
@@ -12,8 +12,11 @@
 
         <!-- Le styles -->
         <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
-            ->prependStylesheet($this->basePath('css/style.css'))
-            ->prependStylesheet('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+            ->prependStylesheet($this->basePath('css/style.css'), 'screen,print')
+            ->prependStylesheet('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', 'screen,print')
+            ->prependStylesheet('https://use.fontawesome.com/releases/v5.7.2/css/all.css')
+            ->prependStylesheet($this->basePath('css/style.css'), 'screen,print')
+            ->prependStylesheet($this->basePath('css/bootstrap.min.css'), 'print')
         ?>
 
         <!-- Scripts -->
@@ -25,7 +28,7 @@
     <body>
     	<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
         	<a class="navbar-brand" href="<?= $this->url('home') ?>">
-        		<img src="<?= $this->basePath('img/zf-logo-mark.svg') ?>" height="28" alt="Zend Framework <?= \Application\Module::VERSION ?>" />&nbsp;Skeleton Application
+        		<img src="<?= $this->basePath('img/cityseal.png') ?>" height="28" alt="Middletown, CT" />&nbsp;Dog Permit
         	</a>
         	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         		<span class="navbar-toggler-icon"></span>
@@ -42,7 +45,7 @@
             <?= $this->content ?>
             <hr>
             <footer id="footer">
-                &copy; 2005 - <?= date('Y') ?> by Zend Technologies Ltd. All rights reserved.
+                &copy; <?= date('Y') ?> by City of Middletown, Connecticut. All rights reserved.
             </footer>
         </div>
         <?= $this->inlineScript() 
