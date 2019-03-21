@@ -1,15 +1,15 @@
-[submodule "module\\Dog"]
-	path = module\\Dog
-	url = ssh://git@github.com/comcduarte/dogModule
-[submodule "module\\Midnet"]
-	path = module\\Midnet
-	url = ssh://git@github.com/comcduarte/midnetModule
-[submodule "module\\Annotation"]
-	path = module\\Annotation
-	url = ssh://git@github.com/comcduarte/annotationModule
-[submodule "module\\User"]
-	path = module\\User
-	url = ssh://git@github.com/comcduarte/userModule
-[submodule "module\\Acl"]
-	path = module\\Acl
-	url = ssh://git@github.com/comcduarte/aclModule
+[submodule "module/Dog"]
+	path = module/Dog
+	url = https://github.com/comcduarte/dogModule
+[submodule "module/Midnet"]
+	path = module/Midnet
+	url = https://github.com/comcduarte/midnetModule
+[submodule "module/Annotation"]
+	path = module/Annotation
+	url = https://github.com/comcduarte/annotationModule
+[submodule "module/User"]
+	path = module/User
+	url = https://github.com/comcduarte/userModule
+[submodule "module/Acl"]
+	path = module/Acl
+	url = https://github.com/comcduarte/aclModule
