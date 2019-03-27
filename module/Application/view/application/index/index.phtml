@@ -1,7 +1,8 @@
 <?php
-use Dog\Form\OwnerSearchForm;
 use Dog\Form\DogSearchForm;
 use Dog\Form\LicenseSearchForm;
+use Dog\Form\OwnerSearchForm;
+use Dog\Form\StreetSearchForm;
 
 $this->headScript()
     ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js')
@@ -40,12 +41,28 @@ $this->headScript()
 <div class="card-deck">
 	<div class="card mb-4">
 		<div class="card-header">
-			<b>Unlicensed Dogs</b>
+			<b>Find by Street</b>
 		</div>
 		<div class="card-body">
-			<p class="card-text">
-				Currently there are # unlicensed dogs in the city.
-			</p>
+			<?php 
+			$form = new StreetSearchForm();
+			$form->initialize();
+			$form->setAttribute('action', $this->url('dog/dog', ['action' => 'find']));
+			$form->prepare();
+			echo $this->form()->openTag($form);
+			?>
+			<div class="form-group">
+				<?php echo $this->formRow($form->get('SECURITY')); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formRow($form->get('NAME')); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formRow($form->get('SUBMIT')); ?>
+			</div>
+			<?php
+			echo $this->form()->closeTag($form);
+			?>
 		</div>
 	</div>
 	
