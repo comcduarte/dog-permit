@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `dog_licenses` (
   `UUID` varchar(36) NOT NULL,
   `TAG` int(11) DEFAULT NULL,
   `DOG` varchar(36) DEFAULT NULL,
-  `YEAR` varchar(4) DEFAULT NULL,
+  `YEAR` varchar(9) DEFAULT NULL,
   `STATUS` int(11) DEFAULT NULL,
   `PAYMENT_STATUS` int(11) DEFAULT '0',
   `FEE` tinyint(4) DEFAULT NULL,
