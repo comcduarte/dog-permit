@@ -91,6 +91,9 @@ $this->headScript()
 			echo $this->form()->closeTag($form);
 			?>
 		</div>
+		<div class="card-footer">
+			<a class="btn btn-small btn-primary" href="<?php echo $this->url('dog/owner', ['action' => 'create']); ?>">Add New Owner</a>
+		</div>
 	</div>
 	
 	<div class="w-100 d-none d-sm-block d-lg-none"><!-- Wrap every 2 on md --></div>
@@ -119,6 +122,9 @@ $this->headScript()
 			<?php
 			echo $this->form()->closeTag($form);
 			?>
+		</div>
+		<div class="card-footer">
+			<a class="btn btn-small btn-primary" href="<?php echo $this->url('dog/dog', ['action' => 'create']); ?>">Add New Dog</a>
 		</div>
 	</div>
 	
