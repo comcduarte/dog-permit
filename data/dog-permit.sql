@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `dog_codes` (
 
 CREATE TABLE IF NOT EXISTS `dog_licenses` (
   `UUID` varchar(36) NOT NULL,
-  `TAG` int(11) DEFAULT NULL,
+  `TAG` varchar(10) DEFAULT NULL,
   `DOG` varchar(36) DEFAULT NULL,
   `YEAR` varchar(9) DEFAULT NULL,
   `STATUS` int(11) DEFAULT NULL,
