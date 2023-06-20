@@ -13,7 +13,6 @@
 	"prefer-stable" : true,
 	"require" : {
 		"php" : "^5.6 || ^7.0",
-		"zendframework/zend-component-installer" : "^1.0 || ^0.7 || ^1.0.0-dev@dev",
 		"zendframework/zend-mvc" : "3.1.1",
 		"zfcampus/zf-development-mode" : "3.2.0",
 		"zendframework/zend-db" : "~2.10",
@@ -26,7 +25,9 @@
 		"zendframework/zend-mvc-plugin-flashmessenger" : "~1.1",
 		"zendframework/zend-i18n" : "~2.9",
 		"zendframework/zend-permissions-rbac" : "~3.0",
-		"zendframework/zend-permissions-acl" : "~2.7"
+		"zendframework/zend-permissions-acl" : "~2.7",
+		"zendframework/zend-mime" : "~2.7",
+		"zendframework/zend-mail" : "~2.10"
 	},
 	"autoload" : {
 		"psr-4" : {
