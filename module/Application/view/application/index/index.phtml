@@ -1,10 +1,10 @@
 <?php
-use Dog\Form\OwnerSearchForm;
 use Dog\Form\DogSearchForm;
 use Dog\Form\LicenseSearchForm;
+use Dog\Form\OwnerSearchForm;
+use Dog\Form\StreetSearchForm;
 
 $this->headScript()
-    ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js')
     ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js')
     ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/excanvas.min.js')
     ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js')
@@ -20,7 +20,6 @@ $this->headScript()
     ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.stack.min.js')
     ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.symbol.min.js')
     ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.threshold.min.js')
-    ->appendFile('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.js');
 ?>
 <script type="text/javascript">
     $(function() {
@@ -37,19 +36,35 @@ $this->headScript()
     
 </script>
 
-<div class="card-deck pb-4">
-	<div class="card ">
+<div class="card-deck">
+	<div class="card mb-4">
 		<div class="card-header">
-			<b>Unlicensed Dogs</b>
+			<b>Find by Street</b>
 		</div>
 		<div class="card-body">
-			<p class="card-text">
-				Currently there are # unlicensed dogs in the city.
-			</p>
+			<?php 
+			$form = new StreetSearchForm();
+			$form->initialize();
+			$form->setAttribute('action', $this->url('dog/dog', ['action' => 'find']));
+			$form->prepare();
+			echo $this->form()->openTag($form);
+			?>
+			<div class="form-group">
+				<?php echo $this->formRow($form->get('SECURITY')); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formRow($form->get('NAME')); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->formRow($form->get('SUBMIT')); ?>
+			</div>
+			<?php
+			echo $this->form()->closeTag($form);
+			?>
 		</div>
 	</div>
 	
-	<div class="card ">
+	<div class="card mb-4">
 		<div class="card-header">
 			<b>Find by Owner</b>
 		</div>
@@ -74,9 +89,14 @@ $this->headScript()
 			echo $this->form()->closeTag($form);
 			?>
 		</div>
+		<div class="card-footer">
+			<a class="btn btn-small btn-primary" href="<?php echo $this->url('dog/owner', ['action' => 'create']); ?>">Add New Owner</a>
+		</div>
 	</div>
 	
-	<div class="card ">
+	<div class="w-100 d-none d-sm-block d-lg-none"><!-- Wrap every 2 on md --></div>
+	
+	<div class="card mb-4">
 		<div class="card-header">
 			<b>Find by Dog</b>
 		</div>
@@ -101,9 +121,12 @@ $this->headScript()
 			echo $this->form()->closeTag($form);
 			?>
 		</div>
+		<div class="card-footer">
+			<a class="btn btn-small btn-primary" href="<?php echo $this->url('dog/dog', ['action' => 'create']); ?>">Add New Dog</a>
+		</div>
 	</div>
 	
-	<div class="card ">
+	<div class="card mb-4">
 		<div class="card-header">
 			<b>Find by Tag</b>
 		</div>
@@ -134,8 +157,8 @@ $this->headScript()
 	</div>
 </div>
 
-<div class="card-deck pb-4">
-	<div class="card">
+<div class="card-deck">
+	<div class="card mb-4">
 		<div class="card-header">
 			<h4>Dog Licensing Income</h4>
 		</div>
@@ -145,7 +168,10 @@ $this->headScript()
 			</div>
 		</div>
 	</div>
-	<div class="card">
+	
+	<div class="w-100 d-none d-sm-block d-lg-none"><!-- Wrap every 2 on md --></div>
+	
+	<div class="card mb-4">
 		<div class="card-header">
 			<h4>License Ratio</h4>
 		</div>

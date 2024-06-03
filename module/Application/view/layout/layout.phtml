@@ -1,3 +1,8 @@
+<?php 
+header("Cache-Control: no cache");
+// session_cache_limiter("private_no_expire");
+?>
+
 <?= $this->doctype() ?>
 
 <html lang="en">
@@ -7,6 +12,7 @@
 
         <?= $this->headMeta()
             ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendName('node', substr($_SERVER['SERVER_ADDR'], 8) )
             ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
         ?>
 
