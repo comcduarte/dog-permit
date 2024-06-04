@@ -8,17 +8,17 @@
 namespace Application\Controller;
 
 use Dog\Model\OwnerModel;
-use Zend\Db\Adapter\AdapterAwareTrait;
-use Zend\Db\Sql\Where;
-use Zend\Mail\Protocol\Smtp as SmtpProtocol;
-use Zend\Mail\Transport\Smtp as SmtpTransport;
-use Zend\Mime\Mime;
-use Zend\Mvc\Controller\AbstractActionController;
-use Zend\Validator\EmailAddress;
-use Zend\View\Model\ViewModel;
-use Zend\View\Renderer\PhpRenderer;
-use Zend\View\Resolver\AggregateResolver;
-use Zend\View\Resolver\TemplateMapResolver;
+use Laminas\Db\Adapter\AdapterAwareTrait;
+use Laminas\Db\Sql\Where;
+use Laminas\Mail\Protocol\Smtp as SmtpProtocol;
+use Laminas\Mail\Transport\Smtp as SmtpTransport;
+use Laminas\Mime\Mime;
+use Laminas\Mvc\Controller\AbstractActionController;
+use Laminas\Validator\EmailAddress;
+use Laminas\View\Model\ViewModel;
+use Laminas\View\Renderer\PhpRenderer;
+use Laminas\View\Resolver\AggregateResolver;
+use Laminas\View\Resolver\TemplateMapResolver;
 
 
 class IndexController extends AbstractActionController
@@ -68,11 +68,11 @@ class IndexController extends AbstractActionController
         $viewModel->setTemplate('notifications/renewal');
         $view->viewModel()->setRoot($viewModel);
         
-        $message = new \Zend\Mail\Message();
-        $body = new \Zend\Mime\Message();
+        $message = new \Laminas\Mail\Message();
+        $body = new \Laminas\Mime\Message();
         
         $html = $view->render($viewModel);
-        $part = new \Zend\Mime\Part($html);
+        $part = new \Laminas\Mime\Part($html);
         $part->type = Mime::TYPE_HTML;
         
         $message->setFrom('townclerk@middletownct.gov');

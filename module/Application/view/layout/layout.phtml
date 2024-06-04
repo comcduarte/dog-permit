@@ -41,8 +41,8 @@ header("Cache-Control: no cache");
         		<span class="navbar-toggler-icon"></span>
         	</button>
         	<div class="collapse navbar-collapse" id="navbarNav">
-        	<?= $this->navigation('Zend\Navigation\Default')->menu()->setPartial('navigation'); ?>
-            <?= $this->navigation('Zend\Navigation\User')->menu()->setPartial('user/partial/navigation.phtml'); ?>
+        	<?= $this->navigation('Laminas\Navigation\Default')->menu()->setPartial('navigation'); ?>
+            <?= $this->navigation('Laminas\Navigation\User')->menu()->setPartial('user/partial/navigation.phtml'); ?>
     		</div>
 		</nav>
         <div class="container mt-3">
