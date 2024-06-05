@@ -1,62 +1,62 @@
 {
-    "name": "laminas/skeleton-application",
-    "description": "Skeleton Application for Zend Framework zend-mvc applications",
-    "type": "project",
-    "license": "BSD-3-Clause",
-    "keywords": [
-        "framework",
-        "mvc",
-        "zf"
-    ],
-    "homepage": "http://framework.zend.com/",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "laminas/laminas-mvc": "3.1.1",
-        "laminas/laminas-development-mode": "3.2.0",
-        "laminas/laminas-db": "~2.10",
-        "laminas/laminas-form": "2.12.0",
-        "laminas/laminas-paginator": "~2.8",
-        "laminas/laminas-crypt": "~3.3",
-        "laminas/laminas-authentication": "~2.6",
-        "laminas/laminas-session": "~2.8",
-        "laminas/laminas-navigation": "~2.9",
-        "laminas/laminas-mvc-plugin-flashmessenger": "~1.1",
-        "laminas/laminas-i18n": "~2.9",
-        "laminas/laminas-permissions-rbac": "~3.0",
-        "laminas/laminas-permissions-acl": "~2.7",
-        "laminas/laminas-mime": "~2.7",
-        "laminas/laminas-mail": "~2.10",
-        "laminas/laminas-dependency-plugin": "^2.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "Application\\": "module/Application/src/",
-            "Dog\\": "module/Dog/src/",
-            "Midnet\\": "module/Midnet/src",
-            "Annotation\\": "module/Annotation/src",
-            "User\\": "module/User/src",
-            "Acl\\": "module/Acl/src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "ApplicationTest\\": "module/Application/test/"
-        }
-    },
-    "scripts": {
-        "cs-check": "phpcs",
-        "cs-fix": "phpcbf",
-        "development-disable": "laminas-development-mode disable",
-        "development-enable": "laminas-development-mode enable",
-        "development-status": "laminas-development-mode status",
-        "post-create-project-cmd": "@development-enable",
-        "serve": "php -S 0.0.0.0:8080 -t public public/index.php",
-        "test": "phpunit"
-    },
-    "config": {
-        "allow-plugins": {
-            "laminas/laminas-dependency-plugin": true
-        }
-    }
+	"name" : "laminas/skeleton-application",
+	"description" : "Skeleton Application for Zend Framework zend-mvc applications",
+	"type" : "project",
+	"license" : "BSD-3-Clause",
+	"keywords" : [
+		"framework",
+		"mvc",
+		"zf"
+	],
+	"homepage" : "http://framework.zend.com/",
+	"minimum-stability" : "dev",
+	"prefer-stable" : true,
+	"require" : {
+		"laminas/laminas-mvc" : "~3.7",
+		"laminas/laminas-development-mode" : "~3.12",
+		"laminas/laminas-db" : "~2.10",
+		"laminas/laminas-form" : "~3.19",
+		"laminas/laminas-paginator" : "~2.8",
+		"laminas/laminas-crypt" : "~3.3",
+		"laminas/laminas-authentication" : "~2.6",
+		"laminas/laminas-session" : "~2.8",
+		"laminas/laminas-navigation" : "~2.9",
+		"laminas/laminas-mvc-plugin-flashmessenger" : "~1.1",
+		"laminas/laminas-i18n" : "~2.9",
+		"laminas/laminas-permissions-rbac" : "~3.0",
+		"laminas/laminas-permissions-acl" : "~2.7",
+		"laminas/laminas-mime" : "~2.7",
+		"laminas/laminas-mail" : "~2.10",
+		"laminas/laminas-dependency-plugin" : "^2.1"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Application\\" : "module/Application/src/",
+			"Dog\\" : "module/Dog/src/",
+			"Midnet\\" : "module/Midnet/src",
+			"Annotation\\" : "module/Annotation/src",
+			"User\\" : "module/User/src",
+			"Acl\\" : "module/Acl/src"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"ApplicationTest\\" : "module/Application/test/"
+		}
+	},
+	"scripts" : {
+		"cs-check" : "phpcs",
+		"cs-fix" : "phpcbf",
+		"development-disable" : "laminas-development-mode disable",
+		"development-enable" : "laminas-development-mode enable",
+		"development-status" : "laminas-development-mode status",
+		"post-create-project-cmd" : "@development-enable",
+		"serve" : "php -S 0.0.0.0:8080 -t public public/index.php",
+		"test" : "phpunit"
+	},
+	"config" : {
+		"allow-plugins" : {
+			"laminas/laminas-dependency-plugin" : true
+		}
+	}
 }
